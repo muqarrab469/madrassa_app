@@ -13,10 +13,13 @@
         android:theme="@style/Theme.Madrassa_app"
         tools:targetApi="31">
         <activity
-            android:name=".SearchStudent"
+            android:name=".Lesson"
             android:exported="false" />
         <activity
-            android:name=".StudentList"
+            android:name=".ListStudent"
+            android:exported="false" />
+        <activity
+            android:name=".SearchStudent"
             android:exported="false" />
         <activity
             android:name=".AddStudent"

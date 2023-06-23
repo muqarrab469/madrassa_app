@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button add;
     private Button list;
     private Button search;
+    private  Button lesson;
 
     private Button githublink;
     @Override
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         list = findViewById(R.id.viewlist);
         search = findViewById(R.id.search);
         githublink = findViewById(R.id.github);
-
+        lesson=findViewById(R.id.nlesson);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, StudentList.class);
+                Intent intent = new Intent(MainActivity.this, ListStudent.class);
                 startActivity(intent);
             }
         });
@@ -54,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Uri uri = Uri.parse("https://github.com/muqarrab469/madrassa_app");
                 startActivity(new Intent(Intent.ACTION_VIEW,uri));
+            }
+        });
+
+        lesson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Lesson.class);
+                startActivity(intent);
             }
         });
 
